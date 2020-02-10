@@ -52,10 +52,11 @@ public class Cliente {
         this.apellidos = apellidos;
     }
 
-    @Override
-    public String toString() {
-        return "Cliente{" + "nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + '}';
+    Object getnif() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
     
     

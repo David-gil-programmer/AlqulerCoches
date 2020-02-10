@@ -16,26 +16,20 @@ public class VehiculoAlquilado {
     //Atributos
     private Cliente cliente;
     private Vehiculo vehiculo;
-    private LocalDate diaAlquiler;
-    private LocalDate mesAlquiler;
-    private LocalDate añoAlquiler;
+    private LocalDate fecha;
     private int totalDiasAlquiler;
     //constructor por defecto
     public VehiculoAlquilado() {
         this.cliente = new Cliente();
         this.vehiculo = new Vehiculo();
-        this.diaAlquiler = LocalDate.now();
-        this.mesAlquiler = LocalDate.now();
-        this.añoAlquiler = LocalDate.now();
+        this.fecha = LocalDate.now();
         this.totalDiasAlquiler = 3;
     }
     //constructor parametrizado
-    public VehiculoAlquilado(Cliente cliente, Vehiculo vehiculo, int diaAlquiler, int mesAlquiler, int añoAlquiler, int totalDiasAlquiler) {
+    public VehiculoAlquilado(Cliente cliente, Vehiculo vehiculo, LocalDate fecha, int totalDiasAlquiler) {
         this.cliente = cliente;
         this.vehiculo = vehiculo;
-        this.diaAlquiler = diaAlquiler;
-        this.mesAlquiler = mesAlquiler;
-        this.añoAlquiler = añoAlquiler;
+        this.fecha = fecha;
         this.totalDiasAlquiler = totalDiasAlquiler;
     }
 
@@ -56,28 +50,12 @@ public class VehiculoAlquilado {
         this.vehiculo = vehiculo;
     }
 
-    public int getDiaAlquiler() {
-        return diaAlquiler;
+    public LocalDate getFecha() {
+        return fecha;
     }
 
-    public void setDiaAlquiler(int diaAlquiler) {
-        this.diaAlquiler = diaAlquiler;
-    }
-
-    public int getMesAlquiler() {
-        return mesAlquiler;
-    }
-
-    public void setMesAlquiler(int mesAlquiler) {
-        this.mesAlquiler = mesAlquiler;
-    }
-
-    public int getAñoAlquiler() {
-        return añoAlquiler;
-    }
-
-    public void setAñoAlquiler(int añoAlquiler) {
-        this.añoAlquiler = añoAlquiler;
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
     }
 
     public int getTotalDiasAlquiler() {
@@ -87,7 +65,7 @@ public class VehiculoAlquilado {
     public void setTotalDiasAlquiler(int totalDiasAlquiler) {
         this.totalDiasAlquiler = totalDiasAlquiler;
     }
-    
+
 
     
 }
